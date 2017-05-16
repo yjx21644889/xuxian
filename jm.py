@@ -19,12 +19,13 @@ class Jm:
         temp= r.text.split('|')
         return temp[0]
 
-#if __name__ == '__main__':
-#    jm = Jm()
-#    jm.token = jm.login('yjx21644889','1111aaaa')
- #   jm.phone = jm.getMobilenum(jm.token,jm.username,'8445')
+    def getVcodeAndReleaseMobile(self,username,token,phone):
+        params = dict(action='getVcodeAndReleaseMobile',uid= username ,token= token,mobile=phone,author_uid='yjx21644889')
+        r = requests.post(self.url,params)
+        return r.text
 
-#    print jm.token,jm.phone
-
-
+    def addIgnoreList(self,username,token,phone,pid):
+        params = dict(action='addIgnoreList',uid= username ,token= token,mobile=phone,pid=pid)
+        r = requests.post(self.url,params)
+        return r.text
 
