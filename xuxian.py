@@ -1,4 +1,4 @@
 import jm
 
-jm.Jm().login('yjx21644889','1111aaaa')
+print jm.Jm().login('yjx21644889','1111aaaa')
 
