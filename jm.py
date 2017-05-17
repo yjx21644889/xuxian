@@ -17,6 +17,7 @@ class Jm:
         params = dict(action='getMobilenum',pid=pid ,uid= username ,token= token)
         r = requests.post(self.url,params)
         temp= r.text.split('|')
+        self.phone=temp[0]
         return temp[0]
 
     def getVcodeAndReleaseMobile(self,username,token,phone):
