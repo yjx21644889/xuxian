@@ -8,7 +8,7 @@ jm = Jm()
 
 
 print jm.phone
-token =  jm.login('yjx21644889','888888888')
+token =  jm.login('yjx21644889','*******')
 print token
 phone = jm.getMobilenum(token,jm.username,"8445")
 print phone
